@@ -1,8 +1,6 @@
 {
-  "name": "one-click-hugo-cms",
+  "name": "sshear.dev",
   "version": "1.0.0",
-  "description": "Hugo template with Decap CMS ",
-  "repository": "decaporg/one-click-hugo-cms",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src cypress",
@@ -71,6 +69,7 @@
     "netlify-plugin-cypress": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "terminal.css": "^0.7.5",
     "to-string-loader": "^1.2.0"
   }
 }

@@ -10788,6 +10788,11 @@ teeny-tap@^0.2.0:
   resolved "https://registry.yarnpkg.com/teeny-tap/-/teeny-tap-0.2.0.tgz#167e645182d06ac222d62bb2ab67947a70a58a68"
   integrity sha512-HnA3I2sxRQe/SZgQTQgQvvA17DhfzhBJ1LfSOXZ5VUTbxGLvnAqUef84ZGNNSEbk1ZMEIDeghTHZagJ7LifAgg==
 
+terminal.css@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/terminal.css/-/terminal.css-0.7.5.tgz#8e9209036d4aca6bfd2d9262b8264954d15ab645"
+  integrity sha512-M4RU7IRzqSZoJNRZCmxbRJqjxZqP2eV5cWyUlfAwqJx2GkoHlakTyoPLj0tLJwVJurfac38MwL5Mpwr23Yb0ow==
+
 terser-webpack-plugin@^5.2.5, terser-webpack-plugin@^5.3.7:
   version "5.3.9"
   resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-5.3.9.tgz#832536999c51b46d468067f9e37662a3b96adfe1"
