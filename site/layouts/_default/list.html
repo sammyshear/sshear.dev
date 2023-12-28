@@ -2,7 +2,7 @@
 
 <div>
   {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
-  {{ .Render "li"}}
+    {{ .Render "li"}}
   {{ end }}
 </div>
 

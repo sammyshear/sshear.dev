@@ -1,10 +1,8 @@
 <div>
-
 	<h1>Latest Blog Posts</h1>
-
 	<div>
-		{{ range first 4 (where .Data.Pages "Type" "post") }}
-		<div class="ph1-ns w-50-ns flex">
+		{{ range first 4 (where .Site.RegularPages "Type" "post") }}
+		<div>
 			{{ .Render "li" }}
 		</div>
 		{{ end }}
