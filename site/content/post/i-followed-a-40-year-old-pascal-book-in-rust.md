@@ -1,6 +1,6 @@
 ---
 title: I Followed a 40 year old Pascal Book (in Rust)
-date: 2024-01-05T08:32:49.368Z
+date: 2024-01-05T19:09:05.026Z
 description: When Elementary Pascal was published in 1982, the world of
   programming was a very different place. C, of course, already existed, but it
   was only 10 years old. Cobol and Fortran were big in places other than the
