@@ -1,11 +1,8 @@
 <div>
-	<h1>Latest Blog Posts</h1>
-	<div>
-		{{ range first 4 (where .Site.RegularPages "Type" "post") }}
-		<div>
-			{{ .Render "li" }}
-		</div>
-		{{ end }}
-	</div>
-
+  <h1>Latest Blog Posts</h1>
+  <div>
+    {{ range first 4 (where .Site.RegularPages "Type" "post") }}
+    <div>{{ .Render "li" }}</div>
+    {{ end }}
+  </div>
 </div>

@@ -10,33 +10,34 @@ description: When Elementary Pascal was published in 1982, the world of
   code examples in this book in the modern day in a modern language (Rust)?
 image: img/elementary-pascal.jpg
 ---
+
 My father is a big fan of mystery novels, certainly more than I am. I enjoy a Sherlock Holmes story now and again, and I have had fun reading Agatha Christie novels, but he is and always will be a bigger fan of the genre than I. That being said, there is one mystery book I find much more interesting to me than he ever has, and that is "Elementary Pascal" by Henry Ledgard and Andrew Singer. My father will happily tell you the furthest he got in computer programming was making a 3D Cube in Basic and reading the programs for his Commodore 64 in a magazine, but almost never running them as he would have had to copy them each by hand. I, on the other hand, have much more of an interest in programming, as might be evident from the fact I am writing this blog post where I do so. When I was first learning to program as a kid, my father gave me this book that he'd had since he was a kid. He claimed to have hardly read it, but that I might be interested in it, and compared to him I certainly was. That said, I only ever read a few of the examples, as I had very little actual interest in learning Pascal. In more recent years, the book has sat on my shelf, undisturbed, waiting to once again be opened. Today was that day.
 
-
 ### What is this book?
+
 This book is a way of teaching Pascal by examples written in the form of Sherlock Holmes mysteries. Each chapter is a story which teaches you core concepts of the both the Pascal language and programming in general.
 
-
 ### What will I be doing?
+
 I will be, rewriting the Pascal code presented in the book as Rust mostly for fun, but also to see how programming has evolved between the points of these two languages. If there are any optimizations I notice can be made, I'll do my best to implement them, but that isn't really what I'll be focusing on with this.
 
-
 ## Part 1 (Chapter 2): Murder at the Metropolitan Club
+
 If you have this book and are following along at home, you may notice this is technically Chapter 2, but given Chapter 1 is more of an introduction to the concept of a computer than anything else, I figured I'd skip to this chapter for this article.
 
-
 This chapter is all about solving a murder based on clues provided to an algorithm. The basic algorithm used in the book is summed up by the pseudocode they provide:
+
 ```
 1. Look at the next clue
 2. If it establishes a fact then:
     record that fact
-else 
+else
     dismiss the clue
 3. Repeat this process until the murderer is found.
 ```
 
-
 The clues provided are as follows:
+
 1. Sir Raymond Jasper occupied Room 10.
 2. The man occupying Room 14 had black hair.
 3. Either Sir Raymond or Colonel Woodley wore a pince-nez.
@@ -52,14 +53,11 @@ The clues provided are as follows:
 13. Colonel Woodley occupied a corner room.
 14. The murderer had brown hair.
 
-
 This is all the information we have to feed into the algorithm, but there is also a map of the rooms we can use to define what is a corner room. The map shows us that rooms 16 and 10 are corner rooms. For this chapter I will not write any code, as the chapter simply goes over the algorithm and how to create an algorithm in general. In the next chapter we get our first Pascal code, and that's what I will be rewriting.
 
-
-## Part 2 (Chapter 3): Holmes Gives a Demonstration 
+## Part 2 (Chapter 3): Holmes Gives a Demonstration
 
 The Pascal code is fairly interesting to me in the way it approaches the problem. Since I don't really know Pascal all too well, I can't tell you if this was simplified for the purposes of the book or if this is truly the best way to solve this problem. Regardless, I find the code we are given to be fascinating. So as to save me the trouble of transcribing all of it into this article, I will show snippets of the Pascal code with some explanations along the way, then I will show my Rust equivalents.
-
 
 ```pascal
 const
@@ -73,7 +71,7 @@ var
     HAIR : array [COLWOODLEY .. SIRRAYMOND] of INTEGER;
     ATTIRE : array [COLWOODLEY .. SIRRAYMOND] of INTEGER;
     ROOM : array [COLWOODLEY .. SIRRAYMOND] of INTEGER;
-``` 
+```
 
 The first bit of the program assigns the variables and constants that will be used globally in the program. You can probably start piecing together the implementation of the algorithm based on these declarations. There are 3 arrays that are the length of a range between `COLWOODLEY` and `SIRRAYMOND`, each of integers, while each piece of information is defined as a constant between 1 and 4, along with an `UNKNOWN` of 0. The thought process is, of course, that each person represents an index of the arrays, and as such the data of the array `ATTIRE` at that index represents whether they're wearing, say, a ruby ring or a gold watch. The same concept going for the other arrays, of course.
 
@@ -83,7 +81,7 @@ The next bit of the program assigns all the known and unknown pieces of data in 
 
 ```pascal
 MURDERER := UNKNOWN;
-for SUSPECT := COLWOODLEY to SIRRAYMOND do begin 
+for SUSPECT := COLWOODLEY to SIRRAYMOND do begin
     HAIR[SUSPECT] := UNKNOWN;
     ATTIRE[SUSPECT] := UNKNOWN;
     ROOM[SUSPECT] := UNKNOWN
@@ -201,7 +199,7 @@ fn main() {
 
     if suspect == COLWOODLEY {
         println!("Colonel Woodley is the murderer.");
-    } 
+    }
     if suspect == MRHOLMAN {
         println!("Mr. Holman is the murderer.");
     }
@@ -214,4 +212,4 @@ fn main() {
 }
 ```
 
-That's about it for this chapter, and so I will end the post here. I will in all likelihood be making this a series, so if you're interested, stay tuned for post number 2 where I'll try to tackle the fourth chapter, "The Adventure of the Bathing Machine." (These first two chapters are more of a warm up for the format of the book, the following chapters will each be their own mystery). 
+That's about it for this chapter, and so I will end the post here. I will in all likelihood be making this a series, so if you're interested, stay tuned for post number 2 where I'll try to tackle the fourth chapter, "The Adventure of the Bathing Machine." (These first two chapters are more of a warm up for the format of the book, the following chapters will each be their own mystery).
