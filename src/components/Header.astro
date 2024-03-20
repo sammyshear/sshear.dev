@@ -1,0 +1,23 @@
+---
+import { SITE } from "../config";
+import ThemeToggle from "./ThemeToggle";
+---
+
+<header
+	class="flex flex-row justify-between w-[90%] sm:w-3/4 md:w-1/2 lg:w-1/3"
+>
+	<a href="/" class="group text-3xl hover:text-ctp-sky">
+		<span></span>
+		<span
+			class="inline-flex overflow-x-hidden animate-type whitespace-nowrap will-change-transform"
+		>
+			{SITE.author}
+		</span>
+		<span
+			class="box-border inline-block w-1 h-10 ml-2 -mb-2 mt-2 group-hover:bg-ctp-sky bg-ctp-text animate-cursor will-change-transform"
+		></span>
+	</a>
+	<span class="text-2xl place-self-end">
+		<ThemeToggle client:only="react" />
+	</span>
+</header>
