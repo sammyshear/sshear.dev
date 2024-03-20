@@ -5,9 +5,6 @@ export default {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	darkMode: "class",
 	theme: {
-		fontFamily: {
-			sans: ["FiraCode NF"]
-		},
 		animation: {
 			type: "type 1.2s ease-out .4s infinite alternate both",
 			cursor: "cursor .4s linear infinite alternate"
@@ -27,7 +24,7 @@ export default {
 				"95%": { width: "10ch" }
 			},
 			cursor: {
-				"0%, 40%": { opacity: "0" },
+				"0%, 40%": { opacity: "0.1" },
 				"60%, 100%": { opacity: "1" }
 			}
 		}

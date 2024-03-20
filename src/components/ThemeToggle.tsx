@@ -1,3 +1,4 @@
+import { MoonIcon, SunIcon } from "@primer/octicons-react";
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
@@ -19,8 +20,12 @@ export default function ThemeToggle() {
 	}, [theme]);
 
 	return (
-		<button className="hover:text-ctp-yellow" onClick={handleClick}>
-			{theme === "light" ? "" : ""}
+		<button
+			className="hover:text-ctp-yellow inline-flex place-content-center"
+			onClick={handleClick}
+		>
+			{theme === "light" ? <MoonIcon size={16} /> : <SunIcon size={16} />}
+			<span className="w-0 h-0 overflow-hidden">Toggle Theme</span>
 		</button>
 	);
 }
