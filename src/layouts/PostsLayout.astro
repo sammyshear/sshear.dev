@@ -1,0 +1,18 @@
+---
+import Layout from "./Layout.astro";
+import Header from "../components/Header.astro";
+import { SITE } from "../config";
+import { type CollectionEntry } from "astro:content";
+import Posts from "../components/Posts";
+
+export interface Props {
+	posts: CollectionEntry<"blog">[];
+}
+
+const { posts } = Astro.props;
+---
+
+<Layout title={`Blog Posts | ${SITE.title}`}>
+	<Header />
+	<Posts posts={posts} />
+</Layout>

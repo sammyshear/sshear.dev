@@ -32,6 +32,7 @@ export default {
 	plugins: [
 		catppuccin({
 			prefix: "ctp"
-		})
+		}),
+		require("@tailwindcss/typography")
 	]
 };

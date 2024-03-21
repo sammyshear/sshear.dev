@@ -1,0 +1,24 @@
+---
+import { type CollectionEntry } from "astro:content";
+import Prose from "./Prose.astro";
+
+export interface Props {
+	post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<article class="ml-5 mr-5 mt-5 w-[90%] sm:w-3/4 md:w-1/2 lg:w-1/3">
+	<header class="flex flex-col space-between-10 border-b-ctp-text border-b">
+		<h1 class="text-2xl">{post.data.title}</h1>
+		<h4 class="text-lg text-ctp-subtext0">{post.data.author}</h4>
+		<h4 class="text-lg text-ctp-subtext0">{post.data.publishedTime}</h4>
+	</header>
+	<main class="mt-5">
+		<Prose>
+			<Content />
+		</Prose>
+	</main>
+</article>

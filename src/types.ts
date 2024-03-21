@@ -1,6 +1,5 @@
 export type Site = {
+	desc: string;
 	title: string;
 	author: string;
-	lightAndDarkMode: boolean;
-	postPerPage: number;
 };
