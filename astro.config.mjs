@@ -5,10 +5,19 @@ import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 
+import partytown from "@astrojs/partytown";
+
 // https://astro.build/config
 export default defineConfig({
-	site: "https://localhost:4321",
-	integrations: [tailwind(), react(), robotsTxt(), sitemap(), compressor()],
+	site: "https://sshear.dev",
+	integrations: [
+		tailwind(),
+		react(),
+		robotsTxt(),
+		sitemap(),
+		compressor(),
+		partytown({ config: { forward: ["dataLayer.push"] } })
+	],
 	markdown: {
 		shikiConfig: {
 			themes: {
