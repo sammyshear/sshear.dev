@@ -1,6 +1,6 @@
 ---
 title: Writing My Own Language Server in Go (to Parse Chess PGNs)
-publishedTime: 2024-06-26T19:16:00.006Z
+publishedTime: 2024-06-26
 ---
 
 ### What is a Language Server?

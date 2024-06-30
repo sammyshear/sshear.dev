@@ -1,6 +1,6 @@
 ---
 title: Building the Same App 5 Times
-publishedTime: 2021-08-18T00:02:25.286Z
+publishedTime: 2021-08-18
 ---
 
 ### Originally Published on Dev.To

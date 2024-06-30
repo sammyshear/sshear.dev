@@ -14,7 +14,9 @@ const { Content } = await post.render();
 	<header class="flex flex-col space-between-10 border-b-ctp-text border-b">
 		<h1 class="text-2xl">{post.data.title}</h1>
 		<h4 class="text-lg text-ctp-subtext0">{post.data.author}</h4>
-		<h4 class="text-lg text-ctp-subtext0">{post.data.publishedTime}</h4>
+		<h4 class="text-lg text-ctp-subtext0">
+			{post.data.publishedTime.toLocaleDateString()}
+		</h4>
 	</header>
 	<main class="mt-5">
 		<Prose>
