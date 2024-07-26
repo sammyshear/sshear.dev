@@ -3,6 +3,15 @@ title: I Followed a 40 year old Pascal Book (in Rust)
 publishedTime: 2024-01-05
 ---
 
+<!--toc:start-->
+
+-   [What is this book?](#what-is-this-book)
+-   [What will I be doing?](#what-will-i-be-doing)
+-   [Part 1 (Chapter 2): Murder at the Metropolitan Club](#part-1-chapter-2-murder-at-the-metropolitan-club)
+-   [Part 2 (Chapter 3): Holmes Gives a Demonstration](#part-2-chapter-3-holmes-gives-a-demonstration)
+    -   [Rust](#rust)
+    <!--toc:end-->
+
 My father is a big fan of mystery novels, certainly more than I am. I enjoy a Sherlock Holmes story now and again, and I have had fun reading Agatha Christie novels, but he is and always will be a bigger fan of the genre than I. That being said, there is one mystery book I find much more interesting to me than he ever has, and that is "Elementary Pascal" by Henry Ledgard and Andrew Singer. My father will happily tell you the furthest he got in computer programming was making a 3D Cube in Basic and reading the programs for his Commodore 64 in a magazine, but almost never running them as he would have had to copy them each by hand. I, on the other hand, have much more of an interest in programming, as might be evident from the fact I am writing this blog post where I do so. When I was first learning to program as a kid, my father gave me this book that he'd had since he was a kid. He claimed to have hardly read it, but that I might be interested in it, and compared to him I certainly was. That said, I only ever read a few of the examples, as I had very little actual interest in learning Pascal. In more recent years, the book has sat on my shelf, undisturbed, waiting to once again be opened. Today was that day.
 
 ### What is this book?
