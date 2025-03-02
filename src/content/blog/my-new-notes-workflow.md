@@ -7,16 +7,16 @@ I recently made a big change in my life by starting to type up most of my notes 
 
 <!--toc:start-->
 
--   [The Problem](#the-problem)
--   [The Solution](#the-solution)
-    -   [obsidian.nvim](#obsidiannvim)
-        -   [Sidebar: Neorg](#sidebar-neorg)
-    -   [How is this workflow more than just `obsidian.nvim`?](#how-is-this-workflow-more-than-just-obsidiannvim)
-    -   [The `rsync.nvim` Part](#the-rsyncnvim-part)
-    -   [The SSH Server](#the-ssh-server)
-    -   [The Final Part](#the-final-part)
--   [Bonus: Pandoc and Markdown](#bonus-pandoc-and-markdown)
-<!--toc:end-->
+- [The Problem](#the-problem)
+- [The Solution](#the-solution)
+    - [obsidian.nvim](#obsidiannvim)
+        - [Sidebar: Neorg](#sidebar-neorg)
+    - [How is this workflow more than just `obsidian.nvim`?](#how-is-this-workflow-more-than-just-obsidiannvim)
+    - [The `rsync.nvim` Part](#the-rsyncnvim-part)
+    - [The SSH Server](#the-ssh-server)
+    - [The Final Part](#the-final-part)
+- [Bonus: Pandoc and Markdown](#bonus-pandoc-and-markdown)
+    <!--toc:end-->
 
 ## The Problem
 
