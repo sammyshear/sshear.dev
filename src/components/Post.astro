@@ -1,13 +1,14 @@
 ---
 import { type CollectionEntry } from "astro:content";
 import Prose from "./Prose.astro";
+import { render } from "astro:content";
 
 export interface Props {
 	post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <article class="ml-5 mr-5 mt-5 w-[90%] sm:w-3/4 md:w-1/2 lg:w-1/3">

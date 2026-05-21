@@ -7,24 +7,32 @@ import compressor from "astro-compressor";
 
 import partytown from "@astrojs/partytown";
 
+import node from "@astrojs/node";
+
 // https://astro.build/config
 export default defineConfig({
-	site: "https://sshear.dev",
-	integrations: [
-		tailwind(),
-		react(),
-		robotsTxt(),
-		sitemap(),
-		compressor(),
-		partytown({ config: { forward: ["dataLayer.push"] } })
+  site: "https://sshear.dev",
+
+  integrations: [
+      tailwind(),
+      react(),
+      robotsTxt(),
+      sitemap(),
+      compressor(),
+      partytown({ config: { forward: ["dataLayer.push"] } })
 	],
-	markdown: {
-		shikiConfig: {
-			themes: {
-				light: "catppuccin-latte",
-				dark: "catppuccin-mocha"
-			},
-			wrap: true
-		}
-	}
+
+  markdown: {
+      shikiConfig: {
+          themes: {
+              light: "catppuccin-latte",
+              dark: "catppuccin-mocha"
+          },
+          wrap: true
+      }
+	},
+
+  adapter: node({
+    mode: "standalone"
+  })
 });
