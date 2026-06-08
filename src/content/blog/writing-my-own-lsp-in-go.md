@@ -5,15 +5,15 @@ publishedTime: 2024-06-26
 
 <!--toc:start-->
 
--   [What is a Language Server?](#what-is-a-language-server)
--   [What is a Chess PGN?](#what-is-a-chess-pgn)
--   [What can this language server do?](#what-can-this-language-server-do)
--   [Making the Server](#making-the-server)
-    -   [Notes and Issues](#notes-and-issues)
-    -   [The Protocol](#the-protocol)
-    -   [Analysis](#analysis)
--   [Conclusion](#conclusion)
-<!--toc:end-->
+- [What is a Language Server?](#what-is-a-language-server)
+- [What is a Chess PGN?](#what-is-a-chess-pgn)
+- [What can this language server do?](#what-can-this-language-server-do)
+- [Making the Server](#making-the-server)
+    - [Notes and Issues](#notes-and-issues)
+    - [The Protocol](#the-protocol)
+    - [Analysis](#analysis)
+- [Conclusion](#conclusion)
+  <!--toc:end-->
 
 ### What is a Language Server?
 

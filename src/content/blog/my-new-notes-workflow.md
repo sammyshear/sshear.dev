@@ -16,7 +16,7 @@ I recently made a big change in my life by starting to type up most of my notes 
     - [The SSH Server](#the-ssh-server)
     - [The Final Part](#the-final-part)
 - [Bonus: Pandoc and Markdown](#bonus-pandoc-and-markdown)
-    <!--toc:end-->
+  <!--toc:end-->
 
 ## The Problem
 

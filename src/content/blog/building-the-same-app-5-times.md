@@ -13,7 +13,7 @@ publishedTime: 2021-08-18
     - [Vue](#vue)
     - [Svelte](#svelte)
 - [Conclusion](#conclusion)
-      <!--toc:end-->
+  <!--toc:end-->
 
 ### Originally Published on Dev.To
 

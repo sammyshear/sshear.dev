@@ -16,7 +16,7 @@ I have been wanting to do something like this for going on 5 years now, but I to
         - [Example of the Replacement Logic](#example-of-the-replacement-logic)
     - [Bonus](#bonus)
 - [The End and Final Notes](#the-end-and-final-notes)
-  <!--toc:end-->
+    <!--toc:end-->
 
 ## My First Attempt
 
