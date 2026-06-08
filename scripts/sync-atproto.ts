@@ -41,7 +41,8 @@ const CONFIG = {
 
 	// Publication metadata
 	publication: {
-		name: "Sammy Shear's Blog"
+		name: "Sammy Shear's Blog",
+		rkey: "3mnqrmppxwksd"
 	}
 };
 
