@@ -12,7 +12,7 @@ export default function Posts({ posts }: Props) {
 					<a
 						className="flex flex-col bg-ctp-surface1 p-4 rounded-md"
 						key={post.id}
-						href={`/posts/${post.id}`}
+						href={`/blog/${post.id}`}
 					>
 						<span className="text-2xl">{post.data.title}</span>
 						<span className="text-sm text-ctp-subtext0">

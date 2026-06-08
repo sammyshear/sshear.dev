@@ -5,15 +5,15 @@ publishedTime: 2021-08-18
 
 <!--toc:start-->
 
--   [Originally Published on Dev.To](#originally-published-on-devto)
--   [Building the App(s)](#building-the-apps)
-    -   [jQuery](#jquery)
-    -   [Angular](#angular)
-    -   [React](#react)
-    -   [Vue](#vue)
-    -   [Svelte](#svelte)
--   [Conclusion](#conclusion)
-<!--toc:end-->
+- [Originally Published on Dev.To](#originally-published-on-devto)
+- [Building the App(s)](#building-the-apps)
+    - [jQuery](#jquery)
+    - [Angular](#angular)
+    - [React](#react)
+    - [Vue](#vue)
+    - [Svelte](#svelte)
+- [Conclusion](#conclusion)
+      <!--toc:end-->
 
 ### Originally Published on Dev.To
 
