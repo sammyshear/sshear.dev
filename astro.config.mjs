@@ -11,7 +11,7 @@ import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://sshear.dev",
+	site: "https://www.sshear.dev",
 	integrations: [
 		tailwind(),
 		react(),
@@ -34,4 +34,3 @@ export default defineConfig({
 		mode: "standalone"
 	})
 });
-
