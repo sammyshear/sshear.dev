@@ -1,4 +1,5 @@
 FROM ghcr.io/pnpm/pnpm:11 AS base
+RUN pnpm runtime set node 22.22.3 -g
 WORKDIR /app
 
 # By copying only the package.json and package-lock.json here, we ensure that the following `-deps` steps are independent of the source code.
