@@ -2,6 +2,8 @@ FROM ghcr.io/pnpm/pnpm:11 AS base
 RUN pnpm runtime set node 22.22.3 -g
 WORKDIR /app
 
+RUN apt-get update && apt-get -y install wget --no-install-recommends && rm -rf /var/lib/apt/lists
+
 # By copying only the package.json and package-lock.json here, we ensure that the following `-deps` steps are independent of the source code.
 # Therefore, the `-deps` steps will be skipped if only the source code changes.
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
