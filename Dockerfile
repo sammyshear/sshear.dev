@@ -6,7 +6,7 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 
 FROM base AS prod-deps
-RUN pnpm install --omit=dev --frozen-lockfile
+RUN pnpm install --frozen-lockfile
 
 FROM base AS build-deps
 RUN pnpm install
