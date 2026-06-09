@@ -10,7 +10,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-	//site: "https://sshear.dev",
+	site: "https://sshear.dev",
 	integrations: [react(), robotsTxt(), sitemap(), compressor()],
 
 	markdown: {
@@ -36,4 +36,3 @@ export default defineConfig({
 		plugins: [tailwindcss()]
 	}
 });
-
