@@ -1,0 +1,49 @@
+---
+import type { LiveDataEntry } from "astro";
+import { getLiveCollection } from "astro:content";
+
+interface Props {
+	blogPostId: string;
+}
+
+const { blogPostId } = Astro.props;
+
+// This component runs as a server island, fetching live data
+let { entries: comments, error } = await getLiveCollection("comments");
+
+console.log(comments);
+
+comments = comments?.filter((comment) => comment.data.blogPostId == blogPostId);
+
+console.log(comments);
+
+// Cache in the CDN for 10 minutes
+Astro.response.headers.set("Cache-Control", "public, s-maxage=600");
+---
+
+<section class="ml-5 mr-5 mt-5 w-[90%] sm:w-3/4 md:w-1/2 lg:w-1/3">
+	<h2 class="text-xl text-center underline">Comments</h2>
+	{
+		error ? (
+			<p>Unable to load comments at this time.</p>
+		) : comments!.length === 0 ? (
+			<p>No comments yet. Be the first to comment!</p>
+		) : (
+			<div>
+				{comments!.map((comment: LiveDataEntry) => (
+					<div class="text-lg">
+						<div class="text-base">
+							<strong class="text-sm">
+								{comment.data.author.handle}
+							</strong>
+							<time class="text-xs">
+								{comment.data.createdAt.toLocaleDateString()}
+							</time>
+						</div>
+						<p>{comment.data.text}</p>
+					</div>
+				))}
+			</div>
+		)
+	}
+</section>

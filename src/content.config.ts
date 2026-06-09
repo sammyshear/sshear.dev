@@ -8,7 +8,8 @@ const blog = defineCollection({
 	schema: z.object({
 		author: z.string().default(SITE.author),
 		title: z.string(),
-		publishedTime: z.date()
+		publishedTime: z.date(),
+		bskyPostUri: z.string().optional()
 	})
 });
 

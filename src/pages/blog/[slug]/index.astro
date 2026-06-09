@@ -1,9 +1,9 @@
 ---
+export const prerender = true;
 import PostLayout from "../../../layouts/PostLayout.astro";
 import Post from "../../../components/Post.astro";
+import Comments from "../../../components/Comments.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
-
-export const prerender = true;
 
 export interface Props {
 	post: CollectionEntry<"blog">;
@@ -21,8 +21,16 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+
+const commentsVisible = post.data.bskyPostUri != undefined;
 ---
 
 <PostLayout frontmatter={{ title: post.data.title }}>
 	<Post post={post} />
+
+	{
+		commentsVisible && (
+			<Comments server:defer blogPostId={Astro.params.slug} />
+		)
+	}
 </PostLayout>

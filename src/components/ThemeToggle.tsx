@@ -13,8 +13,10 @@ export default function ThemeToggle() {
 	useEffect(() => {
 		if (theme === "dark") {
 			document.documentElement.classList.add("dark");
+			document.documentElement.classList.add("mocha");
 		} else {
 			document.documentElement.classList.remove("dark");
+			document.documentElement.classList.remove("mocha");
 		}
 		localStorage.setItem("theme", theme);
 	}, [theme]);
