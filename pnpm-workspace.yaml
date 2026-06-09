@@ -1,5 +1,8 @@
 allowBuilds:
-    esbuild: true
-    sharp: true
+  esbuild: true
+  sharp: true
+  workerd: true
 trustPolicy: "off"
 trustLockfile: true
+minimumReleaseAgeExclude:
+  - '@tailwindcss/typography@0.5.20'

@@ -6,31 +6,35 @@ import { satteri } from "@astrojs/markdown-satteri";
 import node from "@astrojs/node";
 import tailwindcss from "@tailwindcss/vite";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
-	site: "https://sshear.dev",
-	integrations: [react(), robotsTxt(), sitemap()],
-	markdown: {
-		shikiConfig: {
-			themes: {
-				light: "catppuccin-latte",
-				dark: "catppuccin-mocha"
-			},
-			wrap: true
-		},
-		processor: satteri({
-			features: { directive: true, definitionList: true }
-		})
+  site: "https://sshear.dev",
+  integrations: [react(), robotsTxt(), sitemap()],
+
+  markdown: {
+      shikiConfig: {
+          themes: {
+              light: "catppuccin-latte",
+              dark: "catppuccin-mocha"
+          },
+          wrap: true
+      },
+      processor: satteri({
+          features: { directive: true, definitionList: true }
+      })
 	},
-	build: {
-		inlineStylesheets: "always"
+
+  build: {
+      inlineStylesheets: "always"
 	},
-	output: "static",
-	adapter: node({
-		mode: "standalone",
-		experimentalDisableStreaming: true
-	}),
-	vite: {
-		plugins: [tailwindcss()]
-	}
+
+  output: "static",
+
+  vite: {
+      plugins: [tailwindcss()]
+	},
+
+  adapter: cloudflare()
 });
