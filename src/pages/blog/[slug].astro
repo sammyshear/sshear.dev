@@ -1,0 +1,37 @@
+---
+import PostLayout from "../../layouts/PostLayout.astro";
+import Post from "../../components/Post.astro";
+import Comments from "../../components/Comments.astro";
+import { getCollection } from "astro:content";
+import type {
+	GetStaticPaths,
+	InferGetStaticParamsType,
+	InferGetStaticPropsType
+} from "astro";
+
+export const getStaticPaths = (async () => {
+	const posts = await getCollection("blog");
+
+	const postResult = posts.map((post: any) => ({
+		params: { slug: post.id },
+		props: { post }
+	}));
+
+	console.log(postResult);
+
+	return [...postResult];
+}) satisfies GetStaticPaths;
+
+type Params = InferGetStaticParamsType<typeof getStaticPaths>;
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { post } = Astro.props as Props;
+const { slug } = Astro.params as Params;
+
+const commentsVisible = post.data.bskyPostUri != undefined;
+---
+
+<PostLayout frontmatter={{ title: post.data.title }}>
+	<Post post={post} />
+	{commentsVisible && <Comments server:defer blogPostId={slug} />}
+</PostLayout>

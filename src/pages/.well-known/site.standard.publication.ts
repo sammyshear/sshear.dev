@@ -1,3 +1,4 @@
+export const prerender = false;
 import type { APIRoute } from "astro";
 import { generatePublicationWellKnown } from "@bryanguffey/astro-standard-site";
 
