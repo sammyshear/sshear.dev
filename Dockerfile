@@ -9,7 +9,7 @@ FROM base AS prod-deps
 RUN pnpm install --frozen-lockfile
 
 FROM base AS build-deps
-RUN pnpm install
+RUN pnpm install --frozen-lockfile
 
 FROM build-deps AS build
 COPY . .
